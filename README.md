@@ -85,10 +85,10 @@ f) Verify on the one system:
 ![Screenshot from 2024-12-08 22-31-00](https://github.com/user-attachments/assets/fb297a46-4a5a-4f85-98a8-05c1dd73c7d0)
 
 # 2.Samba Configuration
-## Master (Sender) Setup
+## One (Sender) Setup
 a) Create a directory for sharing:
 
-![Screenshot from 2024-12-08 22-32-28](https://github.com/user-attachments/assets/c685e6ba-d569-4346-9f15-77d27aab7d72)
+![Screenshot from 2024-12-09 18-28-30](https://github.com/user-attachments/assets/8514c041-437a-4ad5-a046-464505590d21)
 
 b) Install Samba:
 
@@ -99,20 +99,22 @@ b) Install Samba:
 
 c) Configure Samba user credentials:
 
-![Screenshot from 2024-12-08 22-35-50](https://github.com/user-attachments/assets/74b638ab-5974-453e-8ca5-c27ccaa020d8)
+
+![Screenshot from 2024-12-09 18-31-28](https://github.com/user-attachments/assets/6a8bed89-bdd2-47e4-b654-ffd4af4fc0e8)
+
 
 
 d) Set permissions for the shared directory:
 
-![Screenshot from 2024-12-08 22-37-34](https://github.com/user-attachments/assets/9f968821-0e72-4474-be53-d682e9cb9b03)
+![Screenshot from 2024-12-09 18-35-21](https://github.com/user-attachments/assets/f847bab8-284a-4d68-a042-9730b13cdc2e)
 
 
 e)Label the directory for Samba:
 
-![Screenshot from 2024-12-08 22-39-50](https://github.com/user-attachments/assets/18b0ac49-e09a-4a4d-bde2-336e85753ea6)
+![Screenshot from 2024-12-09 18-36-46](https://github.com/user-attachments/assets/96e6cfa7-2cce-4f13-a5bf-bb65fa41919d)
 
 
-![Screenshot from 2024-12-08 22-40-25](https://github.com/user-attachments/assets/25f6f783-71d9-4615-b6b8-6dd2a68f0595)
+![Screenshot from 2024-12-09 18-37-25](https://github.com/user-attachments/assets/6a16fdb1-1abc-4d98-8f36-d12eba67775c)
 
 
 f) Add Samba to the firewall:
@@ -122,35 +124,60 @@ f) Add Samba to the firewall:
 
 g) Edit the Samba configuration file:
 
-vi /etc/samba/smb.conf
+![Screenshot from 2024-12-09 18-38-27](https://github.com/user-attachments/assets/e82d47b8-814e-4426-b3ed-5ec16dadc318)
+
 
 h) Add the following section:
 
-![Screenshot from 2024-12-08 22-46-18](https://github.com/user-attachments/assets/acaab6d0-8bb9-4300-be63-705dd2c539b5)
+![Screenshot from 2024-12-09 16-39-21](https://github.com/user-attachments/assets/3c46ddea-8aa3-4d95-8078-4dffc2790a45)
+
 
 ## Windows Client (Receiver1)
 a) Access the shared folder from Windows:
-Open Run (Win + R) and type: \\192.168.0.18
+
+![Screenshot from 2024-12-09 10-45-44](https://github.com/user-attachments/assets/5847ce3c-b529-4b99-a2bf-c313adcc2b0b)
+
+
+
 
 b) Enter credentials:
-yaml
 
-Username: varun
-Password: 1234
+![Screenshot from 2024-12-09 17-08-24](https://github.com/user-attachments/assets/a47be340-ef11-4704-9a47-d59d7b83aef5)
 
-## Linux Client (Receiver2)
+
+![Screenshot from 2024-12-09 17-09-17](https://github.com/user-attachments/assets/cd0d75a5-650f-42a0-a29a-2d87f941625e)
+
+![Screenshot from 2024-12-09 17-09-38](https://github.com/user-attachments/assets/1ad4a513-619e-45fa-ae1e-4b62f4a040b5)
+
+![Screenshot from 2024-12-09 17-14-10](https://github.com/user-attachments/assets/bb91293e-b8b7-47c7-bc4d-01f43376e97e)
+
+![Screenshot from 2024-12-09 17-14-46](https://github.com/user-attachments/assets/606ebdf5-49b4-4865-aaca-46d69f78f56b)
+
+c) verify:
+
+![Screenshot from 2024-12-09 18-40-11](https://github.com/user-attachments/assets/e0880c25-cb35-48e3-b7cc-033171106e74)
+
+
+## Linux Client (Receiver2) (ubuntu)
 a) Create a mount point:
 
-mkdir data3
+![Screenshot from 2024-12-09 17-59-29](https://github.com/user-attachments/assets/ef66ee4e-28d3-45ff-9cc8-ac2de3d95a92)
 
 b) Install Samba client:
 
-yum install samba-client -y
+![Screenshot from 2024-12-09 18-01-23](https://github.com/user-attachments/assets/79ccaedd-d8f9-4ae9-b925-9efa0dba19b0)
 
+![Screenshot from 2024-12-09 18-07-28](https://github.com/user-attachments/assets/ad26e358-488b-44cf-9cf0-26e77f12ecf2)
+
+
+Avoid full version if you are a client;instead,use the Samba client  
+ 
 c) Add Samba to the firewall:
 
-firewall-cmd --add-service=samba
+![Screenshot from 2024-12-09 18-08-27](https://github.com/user-attachments/assets/1977a3e1-81d3-40a2-9531-4061e9be8a03)
+
 
 d) Mount the shared folder:
 
-mount -t cifs //192.168.0.18/my_repo1 /data3 -o username="varun"
+ ![Screenshot from 2024-12-09 18-09-20](https://github.com/user-attachments/assets/e4a96d4a-a6b9-46d9-b984-aede92d2d9df)
+
