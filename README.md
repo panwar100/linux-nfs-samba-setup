@@ -10,7 +10,7 @@ This repository provides step-by-step instructions to configure NFS (Network Fil
 
 2.[Samba Configuration](#2samba-configuration)
 
-- [one (Sender) Setup](#one-(sender)-setup)
+- [one (Sender) Setup](#one-sender-setup)
 - [Windows Client (Receiver1)](#window-client-receiver1)
 - [Linux Client (Receiver2)](#linux-client-receiver2-ubuntu)
 
