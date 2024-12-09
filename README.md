@@ -3,16 +3,16 @@ This repository provides step-by-step instructions to configure NFS (Network Fil
 
 # Table of Contents
 
-1.[NFS Configuration](#1-nfs-configuration)
+1.[NFS Configuration](#1nfs-configuration)
 
-- [Master (Sender) Setup](#master-(sender)-setup)
-- [Server (Receiver) Setup](#server-(receiver)-setup)
+- [one (Sender) Setup](#one-sender-setup-1)
+- [Lenovo (Receiver) Setup](#lenovo-receiver-setup)
 
-2.[Samba Configuration](#2-samba-configuration)
+2.[Samba Configuration](#2samba-configuration)
 
-- [Master (Sender) Setup](#master-(sender)-setup)
-- [Windows Client (Receiver1)](#window-client-(receiver1))
-- [Linux Client (Receiver2)](#linux-client-(receiver2))
+- [one (Sender) Setup](#one-(sender)-setup)
+- [Windows Client (Receiver1)](#window-client-receiver1)
+- [Linux Client (Receiver2)](#linux-client-receiver2-ubuntu)
 
 # 1.NFS Configuration
 ## one (Sender) Setup
