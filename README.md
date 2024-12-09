@@ -106,7 +106,8 @@ c) Configure Samba user credentials:
 
 d) Set permissions for the shared directory:
 
-![Screenshot from 2024-12-09 18-35-21](https://github.com/user-attachments/assets/f847bab8-284a-4d68-a042-9730b13cdc2e)
+![Screenshot from 2024-12-09 18-46-38](https://github.com/user-attachments/assets/c61bac02-36c9-4ea4-b507-9bec3b58b886)
+
 
 
 e)Label the directory for Samba:
